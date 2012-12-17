@@ -1,0 +1,123 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: frmabout.message01
+msgid "Cannot run default browser."
+msgstr "Nem tudom futtatni az alapértelmezés szerinti böngészőt!"
+
+#: frmabout.message02
+msgid "Cannot run default mailer."
+msgstr "Nem tudom futtatni az alapértelmezés szerinti levelezőt!"
+
+#: frmmain.message01
+msgid "Error, please check values!"
+msgstr "Hiba, ellenőrizze a megadott értékeket!"
+
+#: frmmain.message02
+msgid "Save to file"
+msgstr "Mentés fájlba"
+
+#: frmmain.message03
+msgid "result.txt"
+msgstr "eredmeny.txt"
+
+#: frmmain.message04
+msgid "This file is exists, overwrite?"
+msgstr "A fájl lézetik, felülírjam?"
+
+#: frmmain.message05
+msgid "text files (*.txt)|*.txt|"
+msgstr "szöveges fájlok (*.txt)|*.txt|"
+
+#: frmmain.message06
+msgid "Error, cannot write this file!"
+msgstr "Hiba, nem tudom létrehozni a fájlt!"
+
+#: frmmain.message07
+msgid "Do you want to save result?"
+msgstr "Akarja menteni az eredményt?"
+
+#: frmmain.message08
+msgid "EI core choking coil"
+msgstr "EI vasmagos fojtótekercs"
+
+#: TFORM1.BUTTON1.CAPTION
+msgid "E&xit"
+msgstr "&Kilépés"
+
+#: TFORM1.BUTTON2.CAPTION
+msgid "&Calculate!"
+msgstr "&Számolj!"
+
+#: TFORM1.BUTTON3.CAPTION
+msgid "&About"
+msgstr "&Névjegy"
+
+#: TFORM1.BUTTON4.CAPTION
+msgid "&Save"
+msgstr "&Mentés"
+
+#: TFORM1.CAPTION
+msgid "EI core choking coil"
+msgstr "EI vasmagos fojtótekercs"
+
+#: TFORM1.EDIT1.HINT
+msgid "Cross section of iron core"
+msgstr "Vaskeresztmetszet"
+
+#: TFORM1.EDIT2.HINT
+msgid "Total requested place of coil"
+msgstr "A tekercs helyigénye"
+
+#: TFORM1.EDIT3.HINT
+msgid "Round of coil"
+msgstr "Menetszám"
+
+#: TFORM1.EDIT4.HINT
+msgid "Diameter of wire"
+msgstr "Huzalátmérő"
+
+#: TFORM1.FLOATSPINEDIT1.HINT
+msgid "Load current"
+msgstr "Terhelő áram"
+
+#: TFORM1.FLOATSPINEDIT2.HINT
+msgid "Inductance of coil"
+msgstr "Induktivitás"
+
+#: TFORM1.FLOATSPINEDIT3.HINT
+msgid "Width of air gap"
+msgstr "Légrés szélesség"
+
+#: TFORM1.GROUPBOX1.CAPTION
+msgid "Input data"
+msgstr "Kiindulási adatok"
+
+#: TFORM1.GROUPBOX2.CAPTION
+msgid "Result"
+msgstr "Kiszámított adatok"
+
+#: TFORM1.LABEL12.CAPTION
+msgid "rnd"
+msgstr "me"
+
+#: TFORM1.LABEL14.CAPTION
+msgid "(Hold cursor on fields to hint.)"
+msgstr "(A segítségért tartsa a mező felett a kurzort.)"
+
+#: TFORM2.BUTTON1.CAPTION
+msgid "Close"
+msgstr "Bezár"
+
+#: TFORM2.CAPTION
+msgid "About"
+msgstr "Névjegy"
+
+#: TFORM2.LABEL2.CAPTION
+msgid "EI core choking coil sizing application"
+msgstr "EI vasmagos fojtótekercs méretező"
+
+#: TFORM2.LABEL4.CAPTION
+msgid "Licence: GNU GPL 3.0 or later"
+msgstr "Licenc: GNU GPL 3.0 vagy későbbi"
+

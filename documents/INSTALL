@@ -1,0 +1,51 @@
+Installation instructions for Linux operation system
+====================================================
+
+1. Install
+----------
+
+a. Installation from binary '.tar.gz' package
+
+    # cp chc-0.1-i586.tar.gz /opt
+    # cd /opt
+    # tar -xzf chc-0.1-i586.tar.gz
+    # cd chc
+    # ./create_links
+
+                or
+
+    # tar -xzf chc-0.1-i586.tar.gz
+    # cd chc
+    # ./install
+
+b. Installation from '.bin' package
+
+    # ./chc-0.1-i586.bin
+
+c. Installation from source package
+     
+    # tar -xzf chc-0.1.tar.gz
+    # ./configure
+    # make
+    # make install
+
+2. Uninstall
+------------
+
+a. If you installed it from binary '.tar.gz' package
+
+    # /opt/chc/remove_links
+    # rm -r /opt/chc/
+
+            or
+
+    # /opt/chc/uninstall
+
+b. If you installed it from '.bin' package
+
+    # /opt/chc/uninstall
+
+c. If you installed it from source package:
+
+    # make uninstall
+

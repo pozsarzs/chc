@@ -1,0 +1,206 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: frmabout.message01
+msgid "Cannot run default browser."
+msgstr ""
+
+#: frmabout.message02
+msgid "Cannot run default mailer."
+msgstr ""
+
+#: frmmain.message01
+msgid "Error, please check values!"
+msgstr ""
+
+#: frmmain.message02
+msgid "Save to file"
+msgstr ""
+
+#: frmmain.message03
+msgid "result.txt"
+msgstr ""
+
+#: frmmain.message04
+msgid "This file is exists, overwrite?"
+msgstr ""
+
+#: frmmain.message05
+msgid "text files (*.txt)|*.txt|"
+msgstr ""
+
+#: frmmain.message06
+msgid "Error, cannot write this file!"
+msgstr ""
+
+#: frmmain.message07
+msgid "Do you want to save result?"
+msgstr ""
+
+#: frmmain.message08
+msgctxt "frmmain.message08"
+msgid "EI core choking coil"
+msgstr ""
+
+#: TFORM1.BUTTON1.CAPTION
+msgid "E&xit"
+msgstr ""
+
+#: TFORM1.BUTTON2.CAPTION
+msgid "&Calculate!"
+msgstr ""
+
+#: TFORM1.BUTTON3.CAPTION
+msgid "&About"
+msgstr ""
+
+#: TFORM1.BUTTON4.CAPTION
+msgid "&Save"
+msgstr ""
+
+#: TFORM1.EDIT1.HINT
+msgid "Cross section of iron core"
+msgstr ""
+
+#: TFORM1.EDIT2.HINT
+msgid "Total requested place of coil"
+msgstr ""
+
+#: TFORM1.EDIT3.HINT
+msgid "Round of coil"
+msgstr ""
+
+#: TFORM1.EDIT4.HINT
+msgid "Diameter of wire"
+msgstr ""
+
+#: TFORM1.FLOATSPINEDIT1.HINT
+msgid "Load current"
+msgstr ""
+
+#: TFORM1.FLOATSPINEDIT2.HINT
+msgid "Inductance of coil"
+msgstr ""
+
+#: TFORM1.FLOATSPINEDIT3.HINT
+msgid "Width of air gap"
+msgstr ""
+
+#: TFORM1.FORM1.CAPTION
+msgctxt "TFORM1.FORM1.CAPTION"
+msgid "EI core choking coil"
+msgstr ""
+
+#: TFORM1.GROUPBOX1.CAPTION
+msgid "Input data"
+msgstr ""
+
+#: TFORM1.GROUPBOX2.CAPTION
+msgid "Result"
+msgstr ""
+
+#: TFORM1.LABEL1.CAPTION
+msgid "I"
+msgstr ""
+
+#: TFORM1.LABEL10.CAPTION
+msgctxt "TFORM1.LABEL10.CAPTION"
+msgid "cm2"
+msgstr ""
+
+#: TFORM1.LABEL11.CAPTION
+msgid "ni"
+msgstr ""
+
+#: TFORM1.LABEL12.CAPTION
+msgid "rnd"
+msgstr ""
+
+#: TFORM1.LABEL13.CAPTION
+msgid "di"
+msgstr ""
+
+#: TFORM1.LABEL14.CAPTION
+msgid "(Hold cursor on fields to hint.)"
+msgstr ""
+
+#: TFORM1.LABEL18.CAPTION
+msgctxt "TFORM1.LABEL18.CAPTION"
+msgid "mm"
+msgstr ""
+
+#: TFORM1.LABEL2.CAPTION
+msgid "L"
+msgstr ""
+
+#: TFORM1.LABEL3.CAPTION
+msgid "mA"
+msgstr ""
+
+#: TFORM1.LABEL4.CAPTION
+msgid "H"
+msgstr ""
+
+#: TFORM1.LABEL5.CAPTION
+msgid "l"
+msgstr ""
+
+#: TFORM1.LABEL6.CAPTION
+msgctxt "TFORM1.LABEL6.CAPTION"
+msgid "mm"
+msgstr ""
+
+#: TFORM1.LABEL7.CAPTION
+msgid "A"
+msgstr ""
+
+#: TFORM1.LABEL8.CAPTION
+msgctxt "TFORM1.LABEL8.CAPTION"
+msgid "cm2"
+msgstr ""
+
+#: TFORM1.LABEL9.CAPTION
+msgid "Ai"
+msgstr ""
+
+#: TFORM2.BUTTON1.CAPTION
+msgid "Close"
+msgstr ""
+
+#: TFORM2.CAPTION
+msgctxt "TFORM2.CAPTION"
+msgid "About"
+msgstr ""
+
+#: TFORM2.LABEL1.CAPTION
+msgid "Label1"
+msgstr ""
+
+#: TFORM2.LABEL2.CAPTION
+msgid "EI core choking coil sizing application"
+msgstr ""
+
+#: TFORM2.LABEL3.CAPTION
+msgid "(C) 2012 Pozsár Zsolt"
+msgstr ""
+
+#: TFORM2.LABEL4.CAPTION
+msgid "Licence: GNU GPL 3.0 or later"
+msgstr ""
+
+#: TFORM2.LABEL5.CAPTION
+msgid "Web:"
+msgstr ""
+
+#: TFORM2.LABEL6.CAPTION
+msgid "Label6"
+msgstr ""
+
+#: TFORM2.LABEL7.CAPTION
+msgid "E-mail:"
+msgstr ""
+
+#: TFORM2.LABEL8.CAPTION
+msgid "Label8"
+msgstr ""
+

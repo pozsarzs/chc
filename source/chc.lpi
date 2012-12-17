@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="\"/>
+    <Version Value="7"/>
+    <General>
+      <MainUnit Value="0"/>
+      <TargetFileExt Value=""/>
+      <Title Value="Choking coil"/>
+      <Icon Value="0"/>
+      <UseXPManifest Value="True"/>
+      <ActiveEditorIndexAtStart Value="2"/>
+    </General>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+    </i18n>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T 'Lazarus Run Output' -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="5">
+      <Unit0>
+        <Filename Value="chc.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="chc"/>
+        <CursorPos X="5" Y="2"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="32"/>
+        <Bookmarks Count="1">
+          <Item0 X="22" Y="40" ID="1"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="frmmain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmmain"/>
+        <CursorPos X="10" Y="45"/>
+        <TopLine Value="19"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value=""/>
+        <UsageCount Value="9"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="frmabout.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmabout"/>
+        <CursorPos X="11" Y="2"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="2"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\lazarus\lcl\lclclasses.pp"/>
+        <UnitName Value="LCLClasses"/>
+        <CursorPos X="10" Y="32"/>
+        <TopLine Value="21"/>
+        <UsageCount Value="9"/>
+      </Unit4>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="102" Column="16" TopLine="81"/>
+      </Position1>
+      <Position2>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="101" Column="16" TopLine="80"/>
+      </Position2>
+      <Position3>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="100" Column="16" TopLine="79"/>
+      </Position3>
+      <Position4>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="99" Column="16" TopLine="78"/>
+      </Position4>
+      <Position5>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="101" Column="16" TopLine="80"/>
+      </Position5>
+      <Position6>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="107" Column="25" TopLine="101"/>
+      </Position6>
+      <Position7>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="84" Column="22" TopLine="69"/>
+      </Position7>
+      <Position8>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="101" Column="37" TopLine="95"/>
+      </Position8>
+      <Position9>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="242" Column="1" TopLine="224"/>
+      </Position9>
+      <Position10>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="134" Column="8" TopLine="125"/>
+      </Position10>
+      <Position11>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="93" Column="43" TopLine="87"/>
+      </Position11>
+      <Position12>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="94" Column="43" TopLine="88"/>
+      </Position12>
+      <Position13>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="93" Column="43" TopLine="87"/>
+      </Position13>
+      <Position14>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="100" Column="12" TopLine="81"/>
+      </Position14>
+      <Position15>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="108" Column="1" TopLine="101"/>
+      </Position15>
+      <Position16>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="97" Column="43" TopLine="86"/>
+      </Position16>
+      <Position17>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="100" Column="1" TopLine="86"/>
+      </Position17>
+      <Position18>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="115" Column="2" TopLine="101"/>
+      </Position18>
+      <Position19>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="160" Column="9" TopLine="149"/>
+      </Position19>
+      <Position20>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="161" Column="9" TopLine="150"/>
+      </Position20>
+      <Position21>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="177" Column="1" TopLine="173"/>
+      </Position21>
+      <Position22>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="161" Column="13" TopLine="156"/>
+      </Position22>
+      <Position23>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="28" Column="42" TopLine="16"/>
+      </Position23>
+      <Position24>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="160" Column="11" TopLine="159"/>
+      </Position24>
+      <Position25>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="200" Column="68" TopLine="189"/>
+      </Position25>
+      <Position26>
+        <Filename Value="chc.lpr"/>
+        <Caret Line="10" Column="28" TopLine="1"/>
+      </Position26>
+      <Position27>
+        <Filename Value="chc.lpr"/>
+        <Caret Line="37" Column="22" TopLine="21"/>
+      </Position27>
+      <Position28>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="182" Column="3" TopLine="170"/>
+      </Position28>
+      <Position29>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="187" Column="70" TopLine="177"/>
+      </Position29>
+      <Position30>
+        <Filename Value="frmmain.pas"/>
+        <Caret Line="2" Column="9" TopLine="1"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="8"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="chc"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)\"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <UseLineInfoUnit Value="False"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <UseMsgFile Value="True"/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

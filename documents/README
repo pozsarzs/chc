@@ -1,0 +1,66 @@
+
+                       Information about application
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. General information
+~~~~~~~~~~~~~~~~~~~~~~
+   This is an sizing application for calculate EI core choking coils.
+   This is a software, which does not cost money (maybe you must pay for
+use Internet). The lope conditions is the acceptance and observance of
+the General Public Licence.
+   
+   OS support: Linux and Windows.
+   Language support: English and Hungarian.
+
+2. Installer packages
+~~~~~~~~~~~~~~~~~~~~~
+a. for Linux
+   chc-0.1-i586.tar.gz         binary package
+   chc-0.1-i586.bin            installer programme
+   chc_0.1-1_i386.deb          binary package
+
+b. for Windows
+   chc-0.1-win32.zip           binary package
+   chc-0.1-win32.exe           installer application
+
+c. source code
+   chc-0.1.tar.gz              source package
+
+3. Settings
+~~~~~~~~~~~
+   On linux use 'LANG' environment variable to set language of the
+   application.
+
+   for example: English:   en_US,
+                Hungarian: hu_HU
+
+4. Important information
+~~~~~~~~~~~~~~~~~~~~~~~~
+   Copyright (C) 2012 Pozsar Zsolt
+
+   This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+   This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+5. Download and contact
+~~~~~~~~~~~~~~~~~~~~~~~
+   Homepage:                     http://www.pozsarzs.hu
+   Facebook:                     http://www.facebook.com/pozsarzs.hu
+
+   Contact:                      Pozsar Zsolt
+   E-mail:                       pozsarzs@gmail.com
+   MSN:                          pozsarzs@gmail.com
+   Skype:                        pozsarzs
+   Phone:                        +36 (56) 470-272
+   Fax:                          +36 (56) 470-272
+   Mobilphone:                   +36 (30) 249-5030
+

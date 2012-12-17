@@ -1,0 +1,51 @@
+Telepítési utasítás Linux operációs rendszerhez
+===============================================
+
+1. Telepítés
+------------
+
+a. Telepítés bináris '.tar.gz' csomagból
+
+    # cp chc-0.1-i586.tar.gz /opt
+    # cd /opt
+    # tar -xzf chc-0.1-i586.tar.gz
+    # cd chc
+    # ./create_links
+    
+                vagy
+
+    # tar -xzf chc-0.1-i586.tar.gz
+    # cd chc
+    # ./install
+
+b. Telepítés '.bin' csomagból
+
+    # ./chc-0.1-i586.bin
+
+c. Telepítés forráscsomagból
+     
+    # tar -xzf chc-0.1.tar.gz
+    # ./configure
+    # make
+    # make install
+
+2. Eltávolítás
+--------------
+
+a. Ha bináris '.tar.gz' csomagból telepítette
+
+    # /opt/chc/remove_links
+    # rm -r /opt/chc/
+
+            vagy
+
+    # /opt/chc/uninstall
+
+b. Ha '.bin' csomagból telepítette
+
+    # /opt/chc/uninstall
+
+c. Ha forráscsomagból telepítette
+
+    # make uninstall
+
