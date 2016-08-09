@@ -1,6 +1,6 @@
 # +----------------------------------------------------------------------------+
-# | CHC v0.1 * Chocking coil sizing application                                |
-# | Copyright (C) 2012 Pozsar Zsolt <pozsarzs@gmail.com>                       |
+# | CHC v0.2 * Chocking coil sizing application                                |
+# | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                  |
 # | Makefile                                                                   |
 # | Make file                                                                  |
 # +----------------------------------------------------------------------------+
@@ -8,17 +8,18 @@
 include ./Makefile.global
 
 dirs =	desktop documents/hu documents languages manual source
+srcdirs = source
 
 all:
 	@echo Compiling $(name):
-	@for dir in $(dirs); do \
+	@for dir in $(srcdirs); do \
 	  if [ -e Makefile ]; then make -C $$dir all; fi; \
 	done
 	@echo "Source code is compiled."
 
 clean:
 	@echo Cleaning source code:
-	@for dir in $(dirs); do \
+	@for dir in $(srcdirs); do \
 	  if [ -e Makefile ]; then make -C $$dir clean; fi; \
 	done
 	@echo "Source code is cleaned."

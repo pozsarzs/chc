@@ -12,6 +12,7 @@ binfiles = chc
 
 all:
 	@echo Compiling source code...
+	@mkdir --parents ./lib/$(architecture)-$(os)/
 	@for x in $(srcfiles); do \
 	  if [ -e $$x ]; then ppc386 $(fpflag) $$x; echo ""; fi; \
 	done

@@ -26,7 +26,7 @@ interface
 uses
   {$IFDEF WIN32} Windows, {$ENDIF} Classes, SysUtils, FileUtil, Forms, Controls,
   Graphics, Dialogs, StdCtrls, Spin, ComCtrls, ExtCtrls, Buttons, dos,
-  frmabout;
+  frmabout, gettext;
 type
   { TForm1 }
   TForm1 = class(TForm)
@@ -224,10 +224,22 @@ end;
 
 // OnCreate event
 procedure TForm1.FormCreate(Sender: TObject);
+var instpath, exepath, lang: string;
 begin
   saved:=true;
   Form1.Caption:=APPNAME+' v'+APPVER;
   Button2Click(Sender);
+
+  {$IFDEF LINUX}
+    {$IFDEF UseFHS}
+      translateresourcestrings(instpath+'share/locale/'+lang+'/LC_MESSAGES/tubes2pro.mo');
+    {$ELSE}
+      translateresourcestrings(exepath+'languages/'+lang+'/tubes2pro.mo');
+    {$ENDIF}
+  {$ENDIF}
+  {$IFDEF WIN32}
+    translateresourcestrings(exepath+'languages\'+lang+'\tubes2pro.mo');
+  {$ENDIF}
 end;
 
 end.

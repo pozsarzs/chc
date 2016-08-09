@@ -25,11 +25,8 @@ program chc;
 uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}cthreads, {$ENDIF}{$ENDIF}
   Interfaces, Forms,
-  {$IFNDEF UseFHS} DefaultTranslator,{$ENDIF}
   // own forms:
-  frmmain, frmabout
-  // own units:
-{$IFDEF UseFHS}, unttranslator{$ENDIF};
+  frmmain, frmabout;
   
 {$R *.res}
 
