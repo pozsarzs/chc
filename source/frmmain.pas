@@ -165,7 +165,7 @@ var
   b: byte;
 begin
  Button2Click(Sender);
-{$IFDEF LINUX}
+{$IFDEF UNIX}
   Form1.SaveDialog1.InitialDir:=GetEnvironmentVariable('HOME');
 {$ENDIF}
 {$IFDEF WIN32}
@@ -230,7 +230,7 @@ begin
   Form1.Caption:=APPNAME+' v'+APPVER;
   Button2Click(Sender);
 
-  {$IFDEF LINUX}
+  {$IFDEF UNIX}
     {$IFDEF UseFHS}
       translateresourcestrings(instpath+'share/locale/'+lang+'/LC_MESSAGES/tubes2pro.mo');
     {$ELSE}
