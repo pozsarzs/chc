@@ -1,6 +1,6 @@
 { +--------------------------------------------------------------------------+ }
-{ | CHC v0.1 * Chocking coil sizing application                              | }
-{ | Copyright (C) 2012 Pozsar Zsolt <pozsarzs@gmail.com>                     | }
+{ | CHC v0.2 * Chocking coil sizing application                              | }
+{ | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                | }
 { | frmmain.pas                                                              | }
 { | Main form                                                                | }
 { +--------------------------------------------------------------------------+ }
@@ -77,21 +77,27 @@ var
   Form1: TForm1;
   I: single;
   L: single;
+  lang: string[2];
   lr: single;
   A: single;
   Ai: single;
   ni: single;
   di: single;
+  s: string;
   saved: boolean;
 const
-  VERSION='0.1';
+  VERSION='0.2';
   APPNAME='CHC';
-  {$IFDEF WIN32}
-    CSIDL_PROFILE = 40;
-    SHGFP_TYPE_CURRENT = 0;
-  {$ENDIF}
+ {$IFDEF WIN32}
+  CSIDL_PROFILE = 40;
+  SHGFP_TYPE_CURRENT = 0;
+ {$ENDIF}
 
-Resourcestring
+ {$IFDEF UNIX}
+  {$I config.inc}
+ {$ENDIF}
+
+resourcestring
   MESSAGE01='Error, please check values!';
   MESSAGE02='Save to file';
   MESSAGE03='result.txt';
@@ -102,9 +108,9 @@ Resourcestring
   MESSAGE08='EI core choking coil';
 
 {$IFDEF WIN32}
-  function SHGetFolderPath(hwndOwner: HWND; nFolder: Integer; hToken: THandle;
-           dwFlags: DWORD; pszPath: LPTSTR): HRESULT; stdcall;
-           external 'Shell32.dll' name 'SHGetFolderPathA';
+function SHGetFolderPath(hwndOwner: HWND; nFolder: Integer; hToken: THandle;
+         dwFlags: DWORD; pszPath: LPTSTR): HRESULT; stdcall;
+         external 'Shell32.dll' name 'SHGetFolderPathA';
 {$ENDIF}
 
 implementation
@@ -112,14 +118,14 @@ implementation
 { TForm1 }
 
 {$IFDEF WIN32}
-  function GetUserProfile: string;
-  var
-    Buffer: array[0..MAX_PATH] of Char;
-  begin
-    FillChar(Buffer, SizeOf(Buffer), 0);
-    SHGetFolderPath(0, CSIDL_PROFILE, 0, SHGFP_TYPE_CURRENT, Buffer);
-    Result := String(PChar(@Buffer));
-  end;
+function GetUserProfile: string;
+var
+  Buffer: array[0..MAX_PATH] of Char;
+begin
+  FillChar(Buffer, SizeOf(Buffer), 0);
+  SHGetFolderPath(0, CSIDL_PROFILE, 0, SHGFP_TYPE_CURRENT, Buffer);
+  Result := String(PChar(@Buffer));
+end;
 {$ENDIF}
 
 // start sizing
@@ -164,13 +170,13 @@ var
   s: string;
   b: byte;
 begin
- Button2Click(Sender);
-{$IFDEF UNIX}
+  Button2Click(Sender);
+ {$IFDEF UNIX}
   Form1.SaveDialog1.InitialDir:=GetEnvironmentVariable('HOME');
-{$ENDIF}
-{$IFDEF WIN32}
+ {$ENDIF}
+ {$IFDEF WIN32}
   Form1.SaveDialog1.InitialDir:=GetUserProfile;
-{$ENDIF}
+ {$ENDIF}
   Form1.SaveDialog1.Title:=MESSAGE02;
   Form1.SaveDialog1.Filter:=MESSAGE05;
   Form1.SaveDialog1.FilterIndex:=1;
@@ -224,22 +230,33 @@ end;
 
 // OnCreate event
 procedure TForm1.FormCreate(Sender: TObject);
-var instpath, exepath, lang: string;
 begin
   saved:=true;
   Form1.Caption:=APPNAME+' v'+VERSION;
+ {$IFDEF UNIX}
+  s:=getenv('LANG');
+ {$ENDIF}
+ {$IFDEF WIN32}
+  Size:=GetLocaleInfo (LOCALE_USER_DEFAULT, LOCALE_SABBREVLANGNAME, nil, 0);
+  GetMem(Buffer, Size);
+  try
+    GetLocaleInfo (LOCALE_USER_DEFAULT, LOCALE_SABBREVLANGNAME, Buffer, Size);
+    s:=string(Buffer);
+  finally
+    FreeMem(Buffer);
+  end;
+ {$ENDIF}
+  if length(s)=0 then s:='en';
+  lang:=lowercase(s[1..2]);
+ {$IFDEF UNIX}{$IFDEF UseFHS}
+  translateresourcestrings(MYI18PATH+LANG+'/LC_MESSAGES/chc.mo');
+ {$ELSE}
+  translateresourcestrings(EXEPATH+'languages/'+LANG+'/chc_'+LANG+'.mo');
+ {$ENDIF}{$ENDIF}
+ {$IFDEF WIN32}
+  translateresourcestrings(EXEPATH+'languages\'+LANG+'\chc_'+LANG+'.mo');
+ {$ENDIF}
   Button2Click(Sender);
-
-  {$IFDEF UNIX}
-    {$IFDEF UseFHS}
-      translateresourcestrings(instpath+'share/locale/'+lang+'/LC_MESSAGES/tubes2pro.mo');
-    {$ELSE}
-      translateresourcestrings(exepath+'languages/'+lang+'/tubes2pro.mo');
-    {$ENDIF}
-  {$ENDIF}
-  {$IFDEF WIN32}
-    translateresourcestrings(exepath+'languages\'+lang+'\tubes2pro.mo');
-  {$ENDIF}
 end;
 
 end.

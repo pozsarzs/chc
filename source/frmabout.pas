@@ -1,8 +1,8 @@
 { +--------------------------------------------------------------------------+ }
-{ | CHC v0.1 * Chocking coil sizing application                              | }
-{ | Copyright (C) 2012 Pozsar Zsolt <pozsarzs@gmail.com>                     | }
-{ | frmmain.pas                                                              | }
-{ | Main form                                                                | }
+{ | CHC v0.2 * Chocking coil sizing application                              | }
+{ | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                | }
+{ | frmabout.pas                                                             | }
+{ | About                                                                    | }
 { +--------------------------------------------------------------------------+ }
 
 {
@@ -57,7 +57,7 @@ type
 var
   Form2: TForm2;
 const
-  {$IFDEF LINUX}
+  {$IFDEF UNIX}
     BROWSER='xdg-open';
     MAILER='xdg-email';
   {$ENDIF}
