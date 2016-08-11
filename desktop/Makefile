@@ -1,8 +1,8 @@
 # +----------------------------------------------------------------------------+
-# | CHC v0.1 * Chocking coil sizing application                                |
-# | Copyright (C) 2012 Pozsar Zsolt <pozsarzs@gmail.com>                       |
+# | CHC v0.2 * Chocking coil sizing application                                |
+# | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                  |
 # | Makefile                                                                   |
-# | Make file                                                                  |
+# | Makefile for other files                                                   |
 # +----------------------------------------------------------------------------+
 
 include ../Makefile.global
@@ -15,28 +15,28 @@ all:
 clean:
 
 install:
-	@echo -n Installing desktop files...
-	@$(install) --directory $(datadir)/applications
+	@echo -n "- Installing desktop files..."
+	@$(install) -d $(datarootdir)/applications
 	@for x in $(desktopfiles); do \
-	  if [ -e $$x ]; then $(install) --mode $(txtmode) $$x $(datadir)/applications/; fi; \
+	  if [ -e $$x ]; then $(install) -m $(txtmode) $$x $(datarootdir)/applications/; fi; \
 	done
 	@echo "done."
-	@echo -n Installing icon files...
-	@$(install) --directory $(datadir)/pixmaps
+	@echo -n "- Installing icon files..."
+	@$(install) -d $(datarootdir)/pixmaps
 	@for x in $(iconfiles); do \
-	  if [ -e $$x ]; then $(install) --mode $(txtmode) $$x $(datadir)/pixmaps/; fi; \
+	  if [ -e $$x ]; then $(install) -m $(txtmode) $$x $(datarootdir)/pixmaps/; fi; \
 	done
 	@echo "done."
 
 uninstall:
-	@echo -n Removing desktop files...
+	@echo -n "- Removing desktop files..."
 	@for x in $(desktopfiles); do \
-	  if [ -e $$x ]; then $(rm) $(datadir)/applications/$$x; fi; \
+	  if [ -e $$x ]; then $(rm) $(datarootdir)/applications/$$x; fi; \
 	done
 	@echo "done."
-	@echo -n Removing icon files...
+	@echo -n "- Removing icon files..."
 	@for x in $(iconfiles); do \
-	  if [ -e $$x ]; then $(rm) $(datadir)/pixmaps/$$x; fi; \
+	  if [ -e $$x ]; then $(rm) $(datarootdir)/pixmaps/$$x; fi; \
 	done
 	@echo "Done."
 

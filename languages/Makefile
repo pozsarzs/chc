@@ -1,8 +1,8 @@
 # +----------------------------------------------------------------------------+
-# | CHC v0.1 * Chocking coil sizing application                                |
-# | Copyright (C) 2012 Pozsar Zsolt <pozsarzs@gmail.com>                       |
+# | CHC v0.2 * Chocking coil sizing application                                |
+# | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                  |
 # | Makefile                                                                   |
-# | Make file                                                                  |
+# | Makefile for message files                                                 |
 # +----------------------------------------------------------------------------+
 
 include ../Makefile.global
@@ -18,8 +18,8 @@ install:
 	@for x in $(languages); do \
 	  if [ -e $(name)_$$x.mo ]; \
 	  then \
-	    $(install) --directory $(localedir)/$$x/LC_MESSAGES; \
-	    $(install) --mode $(txtmode) $(name)_$$x.mo $(localedir)/$$x/LC_MESSAGES; \
+	    $(install) -d $(localedir)/$$x/LC_MESSAGES; \
+	    $(install) -m $(txtmode) $(name)_$$x.mo $(localedir)/$$x/LC_MESSAGES; \
 	    mv $(localedir)/$$x/LC_MESSAGES/$(name)_$$x.mo $(localedir)/$$x/LC_MESSAGES/$(name).mo ; \
 	  fi; \
 	done

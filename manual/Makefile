@@ -1,8 +1,8 @@
 # +----------------------------------------------------------------------------+
-# | CHC v0.1 * Chocking coil sizing application                                |
-# | Copyright (C) 2012 Pozsar Zsolt <pozsarzs@gmail.com>                       |
+# | CHC v0.2 * Chocking coil sizing application                                |
+# | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                  |
 # | Makefile                                                                   |
-# | Make file                                                                  |
+# | Makefile for manuals                                                       |
 # +----------------------------------------------------------------------------+
 
 include ../Makefile.global
@@ -18,8 +18,8 @@ install:
 	@for x in $(languages); do \
 	  if [ -e $(name)_$$x.7 ]; \
 	  then \
-	    $(install) --directory $(mandir)/$$x/man7; \
-	    $(install) --mode $(txtmode) $(name)_$$x.7 $(mandir)/$$x/man7; \
+	    $(install) -d $(mandir)/$$x/man7; \
+	    $(install) -m $(txtmode) $(name)_$$x.7 $(mandir)/$$x/man7; \
 	    mv $(mandir)/$$x/man7/$(name)_$$x.7 $(mandir)/$$x/man7/$(name).7 ; \
 	  fi; \
 	done

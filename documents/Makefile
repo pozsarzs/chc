@@ -1,8 +1,8 @@
 # +----------------------------------------------------------------------------+
-# | CHC v0.1 * Chocking coil sizing application                                |
-# | Copyright (C) 2012 Pozsar Zsolt <pozsarzs@gmail.com>                       |
+# | CHC v0.2 * Chocking coil sizing application                                |
+# | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                  |
 # | Makefile                                                                   |
-# | Make file                                                                  |
+# | Makefile for documents                                                     |
 # +----------------------------------------------------------------------------+
 
 include ../Makefile.global
@@ -15,18 +15,18 @@ all:
 clean:
 
 install:
-	@echo -n Installing document files...
-	@$(install) --directory $(datadir)/doc/$(name)/$(lang)
+	@echo -n "- Installing document files..."
+	@$(install) -d $(datarootdir)/doc/$(name)/$(lang)
 	@for x in $(docfiles); do \
-	  if [ -e $$x ]; then $(install) --mode $(txtmode) $$x $(datadir)/doc/$(name)/$(lang); fi; \
+	  if [ -e $$x ]; then $(install) -m $(txtmode) $$x $(datarootdir)/doc/$(name)/$(lang); fi; \
 	done
 	@echo "done."
 
 uninstall:
-	@echo -n Removing document files...
+	@echo -n "- Removing document files..."
 	@for x in $(docfiles); do \
-	  if [ -e $$x ]; then $(rm) $(datadir)/doc/$(name)/$(lang)/$$x; fi; \
+	  if [ -e $$x ]; then $(rm) $(datarootdir)/doc/$(name)/$(lang)/$$x; fi; \
 	done
-	@rmdir $(datadir)/doc/$(name)/$(lang)
+	@rmdir $(datarootdir)/doc/$(name)/$(lang)
 	@echo "done."
 
