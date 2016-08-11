@@ -147,7 +147,7 @@ end;
 // OnCreate event
 procedure TForm2.FormCreate(Sender: TObject);
 begin
-  Label1.Caption:=frmmain.APPNAME+' v'+frmmain.APPVER;
+  Label1.Caption:=frmmain.APPNAME+' v'+frmmain.VERSION;
   Label6.Caption:=WEB;
   Label8.Caption:=EMAIL;
 end;

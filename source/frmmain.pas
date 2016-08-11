@@ -84,7 +84,7 @@ var
   di: single;
   saved: boolean;
 const
-  APPVER='0.1';
+  VERSION='0.1';
   APPNAME='CHC';
   {$IFDEF WIN32}
     CSIDL_PROFILE = 40;
@@ -227,7 +227,7 @@ procedure TForm1.FormCreate(Sender: TObject);
 var instpath, exepath, lang: string;
 begin
   saved:=true;
-  Form1.Caption:=APPNAME+' v'+APPVER;
+  Form1.Caption:=APPNAME+' v'+VERSION;
   Button2Click(Sender);
 
   {$IFDEF UNIX}

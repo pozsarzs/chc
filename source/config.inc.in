@@ -1,6 +1,6 @@
 { +--------------------------------------------------------------------------+ }
-{ | CHC v0.1 * Chocking coil sizing application                              | }
-{ | Copyright (C) 2012 Pozsar Zsolt <pozsarzs@gmail.com>                     | }
+{ | CHC v0.2 * Chocking coil sizing application                              | }
+{ | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                | }
 { | config.inc(.in)                                                          | }
 { | Setting for source code.                                                 | }
 { +--------------------------------------------------------------------------+ }
@@ -20,6 +20,7 @@ General Public License for more details.
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 }
 
-const myi18path='@prefix@/share/locale/';
-const instpath='@prefix@/';
+const
+  MYI18PATH='@prefix@/share/locale/';
+  INSTPATH='@prefix@/';
 
