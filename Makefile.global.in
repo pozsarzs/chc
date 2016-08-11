@@ -2,7 +2,7 @@
 # | CHC v0.2 * Chocking coil sizing application                                |
 # | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                  |
 # | Makefile.global                                                            |
-# | Global makefile for Linux                                                  |
+# | Global makefile for Unix-like systems                                      |
 # +----------------------------------------------------------------------------+
 
 name		= chc
@@ -19,7 +19,7 @@ localedir	= @datarootdir@/locale
 mandir		= @datarootdir@/man
 srcdir		= @srcdir@
 sysconfdir	= @sysconfdir@
-lazdir		= @lazdir@
+lcldir		= @lazdir@
 
 binmode		= 0755
 txtmode		= 0644
@@ -28,19 +28,18 @@ install		= @install@
 make		= @make@
 rm		= @rm@ --force
 
-fpflag		= @fpflag@ \
-                  -TLinux \
+fpflag		= -T@os@ \
                   -dUseFHS \
                   -MObjFPC \
                   -Scgi \
                   -O1 \
                   -ve \
-                  -Fu@lazdir@/lcl/units/@architecture@-linux/ \
-                  -Fu@lazdir@/lcl/units/@architecture@-linux/gtk2/ \
-                  -Fu@lazdir@/components/lazutils/lib/@architecture@-linux/ \
+                  -Fu@lcldir@/units/@architecture@-@os@/ \
+                  -Fu@lcldir@/units/@architecture@-@os@/gtk2/ \
+                  -Fu@lcldir@/../components/lazutils/lib/@architecture@-@os@/ \
                   -Fu. \
-                  -Fu./lib/@architecture@-linux/ \
-                  -FE./lib/@architecture@-linux/ \
+                  -Fu./lib/@architecture@-@os@/ \
+                  -FE./lib/@architecture@-@os@/ \
                   -dLCL \
                   -dLCLgtk2
 

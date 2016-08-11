@@ -2,43 +2,38 @@ dnl +--------------------------------------------------------------------------+
 dnl | CHC v0.2 * Chocking coil sizing application                              |
 dnl | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                |
 dnl | configure.in                                                             |
-dnl | Autoconf input file for unix like systems                                |
+dnl | Autoconf input file for unix-like systems                                |
 dnl +--------------------------------------------------------------------------+
 
 AC_INIT(source/config.inc.in)
 AC_CONFIG_AUX_DIR(config)
 AC_CANONICAL_SYSTEM
 
-dnl - search programmes
 AC_PATH_PROG(rm, rm, no)
 AC_PATH_PROG(install, install, no)
-AC_CHECK_PROGS(make, gmake make)
-AC_CHECK_PROGS(havefpc,ppc386,no)
-test x"$havefpc" = xno && AC_MSG_ERROR(There is not FreePascal compiler on your system.)
-AC_CHECK_PROGS(havelazarus1,lazarus,no)
-AC_CHECK_PROGS(havelazarus2,lazarus-ide,no)
-test x"$havelazarus1" = xno && test x"$havelazarus2" = xno && AC_MSG_ERROR(There is not Lazarus on your system.)
-lazdir=`find /usr/lib/lazarus/*.*.* -maxdepth 0`
 
-dnl - set install prefix
+AC_CHECK_PROGS(make, gmake make)
+test "$make" = "" && AC_MSG_ERROR(Make not found!)
+AC_CHECK_PROGS(hfpc,ppc386,no)
+test x"$hfpc" = xno && AC_MSG_ERROR(FreePascal compiler not found!)
+
+lcldir=`find /usr -type d -name lcl | grep lazarus | grep -v doc | grep -v test`
+AC_CHECK_FILE($lcldir/lclbase.lpk,,AC_MSG_ERROR(LCL unit files not found!))
+
 AC_PREFIX_DEFAULT("/usr/local")
 test x"$prefix" = xNONE && prefix="$ac_default_prefix"
-dnl - get programme version
-version=`cat documents/VERSION`
 
-dnl - set others
+AC_CHECK_FILE(documents/VERSION,,AC_MSG_ERROR(VERSION file not found!))
+version=`cat documents/VERSION`
 os=`ppc386 -iSO`
 architecture=`ppc386 -iSP`
 
-dnl - make global Makefile
-cp "Makefile.global.${os}" "Makefile.global.in"
-test "$?" = "1" && AC_MSG_ERROR(There is not global Makefile for this system!)
 AC_SUBST(architecture)
 AC_SUBST(bindir)
 AC_SUBST(datarootdir)
 AC_SUBST(fpflag)
 AC_SUBST(install)
-AC_SUBST(lazdir)
+AC_SUBST(lcldir)
 AC_SUBST(libdir)
 AC_SUBST(make)
 AC_SUBST(os)
@@ -47,9 +42,7 @@ AC_SUBST(rm)
 AC_SUBST(sysconfdir)
 AC_SUBST(version)
 AC_OUTPUT( Makefile.global source/config.inc )
-rm "Makefile.global.in"
 
-dnl - write summary
 echo "
 Summary
 =======
