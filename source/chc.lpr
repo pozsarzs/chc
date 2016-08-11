@@ -28,7 +28,7 @@ uses
 var
   b: byte;
   appmode: byte;
-  fe, fn: string;
+  fn: string;
 const
   params: array[1..2,1..3] of string=
   (
@@ -87,10 +87,10 @@ begin
     10: help(false);
     20: verinfo;
   end;
-  Application.Title:=frmmain.APPNAME;
+  Application.Title:='CHC';
   Application.Initialize;
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.
-
+

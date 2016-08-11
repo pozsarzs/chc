@@ -25,7 +25,7 @@ unit frmmain;
 interface
 uses
   {$IFDEF WIN32} Windows, {$ENDIF} Classes, SysUtils, FileUtil, Forms, Controls,
-  Graphics, Dialogs, StdCtrls, Spin, ComCtrls, ExtCtrls, Buttons, dos,
+  Graphics, Dialogs, StdCtrls, Spin, ExtCtrls, Buttons, dos,
   frmabout, gettext;
 type
   { TForm1 }
@@ -74,6 +74,7 @@ type
     { public declarations }
   end; 
 var
+  exepath, p: shortstring;
   Form1: TForm1;
   I: single;
   L: single;
@@ -85,6 +86,7 @@ var
   di: single;
   s: string;
   saved: boolean;
+  userdir: string;
 const
   VERSION='0.2';
   APPNAME='CHC';
@@ -171,12 +173,7 @@ var
   b: byte;
 begin
   Button2Click(Sender);
- {$IFDEF UNIX}
-  Form1.SaveDialog1.InitialDir:=GetEnvironmentVariable('HOME');
- {$ENDIF}
- {$IFDEF WIN32}
-  Form1.SaveDialog1.InitialDir:=GetUserProfile;
- {$ENDIF}
+  Form1.SaveDialog1.InitialDir:=userdir;
   Form1.SaveDialog1.Title:=MESSAGE02;
   Form1.SaveDialog1.Filter:=MESSAGE05;
   Form1.SaveDialog1.FilterIndex:=1;
@@ -233,6 +230,18 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
   saved:=true;
   Form1.Caption:=APPNAME+' v'+VERSION;
+
+ {$IFDEF WIN32}
+  fsplit(paramstr(0),exepath,p,p);
+ {$ENDIF}
+
+ {$IFDEF UNIX}
+  userdir:=getenvironmentvariable('HOME');
+ {$ENDIF}
+ {$IFDEF WIN32}
+  userdir:=getuserprofile;
+ {$ENDIF}
+
  {$IFDEF UNIX}
   s:=getenv('LANG');
  {$ENDIF}
@@ -256,6 +265,7 @@ begin
  {$IFDEF WIN32}
   translateresourcestrings(EXEPATH+'languages\'+LANG+'\chc_'+LANG+'.mo');
  {$ENDIF}
+
   Button2Click(Sender);
 end;
 

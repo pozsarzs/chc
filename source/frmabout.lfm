@@ -147,7 +147,7 @@ object Form2: TForm2
   }
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '0.9.28.2'
+  LCLVersion = '1.2.4.0'
   object Bevel1: TBevel
     Left = 4
     Height = 148
@@ -157,9 +157,9 @@ object Form2: TForm2
   end
   object Label1: TLabel
     Left = 12
-    Height = 14
+    Height = 11
     Top = 12
-    Width = 38
+    Width = 37
     Caption = 'Label1'
     Font.Style = [fsBold]
     ParentColor = False
@@ -167,9 +167,9 @@ object Form2: TForm2
   end
   object Label2: TLabel
     Left = 12
-    Height = 14
+    Height = 11
     Top = 32
-    Width = 206
+    Width = 205
     Caption = 'EI core choking coil sizing application'
     Font.Style = [fsBold]
     ParentColor = False
@@ -177,34 +177,34 @@ object Form2: TForm2
   end
   object Label3: TLabel
     Left = 12
-    Height = 14
+    Height = 11
     Top = 64
-    Width = 106
+    Width = 105
     Caption = '(C) 2012 Pozsár Zsolt'
     ParentColor = False
   end
   object Label4: TLabel
     Left = 12
-    Height = 14
+    Height = 11
     Top = 80
-    Width = 147
+    Width = 146
     Caption = 'Licence: GNU GPL 3.0 or later'
     ParentColor = False
   end
   object Label5: TLabel
     Left = 12
-    Height = 14
+    Height = 11
     Top = 112
-    Width = 24
+    Width = 23
     Caption = 'Web:'
     ParentColor = False
   end
   object Label6: TLabel
     Cursor = crHandPoint
     Left = 66
-    Height = 14
+    Height = 11
     Top = 112
-    Width = 33
+    Width = 32
     Caption = 'Label6'
     Font.Color = clBlue
     ParentColor = False
@@ -215,18 +215,18 @@ object Form2: TForm2
   end
   object Label7: TLabel
     Left = 12
-    Height = 14
+    Height = 11
     Top = 128
-    Width = 35
+    Width = 34
     Caption = 'E-mail:'
     ParentColor = False
   end
   object Label8: TLabel
     Cursor = crHandPoint
     Left = 66
-    Height = 14
+    Height = 11
     Top = 128
-    Width = 33
+    Width = 32
     Caption = 'Label8'
     Font.Color = clBlue
     ParentColor = False

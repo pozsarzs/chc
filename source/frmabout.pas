@@ -82,7 +82,8 @@ uses frmmain;
 // run browser
 procedure runbrowser(url: string);
 begin
-  Form2.Process1.CommandLine:=BROWSER+' '+url;
+  Form2.Process1.Executable:=BROWSER;
+  Form2.Process1.Parameters.Add(url);
   try
     Form2.Process1.Execute;
   except
@@ -93,7 +94,8 @@ end;
 // run mailer
 procedure runmailer(url: string);
 begin
-  Form2.Process2.CommandLine:=MAILER+' '+url;
+  Form2.Process1.Executable:=MAILER;
+  Form2.Process1.Parameters.Add(url);
   try
     Form2.Process2.Execute;
   except
