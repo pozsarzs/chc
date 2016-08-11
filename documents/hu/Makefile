@@ -7,7 +7,7 @@
 
 include ../../Makefile.global
 
-docfiles= `ls -I ?? | grep -v Makefile`
+docfiles= `ls | grep -v Makefile | grep -v ??`
 lang=hu
 
 all:

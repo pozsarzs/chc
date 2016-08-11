@@ -26,7 +26,7 @@ txtmode		= 0644
 
 install		= @install@
 make		= @make@
-rm		= @rm@ --force
+rm		= @rm@ -f
 
 fpflag		= -T@os@ \
                   -dUseFHS \
