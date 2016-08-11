@@ -14,7 +14,7 @@ all:
 clean:
 
 install:
-	@echo -n Installing manual files...
+	@echo -n "- Installing manual files..."
 	@for x in $(languages); do \
 	  if [ -e $(name)_$$x.7 ]; \
 	  then \
@@ -23,14 +23,14 @@ install:
 	    mv $(mandir)/$$x/man7/$(name)_$$x.7 $(mandir)/$$x/man7/$(name).7 ; \
 	  fi; \
 	done
-	@$(install) --directory $(mandir)/man7;
+	@$(install) -d $(mandir)/man7;
 	@mv $(mandir)/en/man7/* $(mandir)/man7
 	@rmdir $(mandir)/en/man7/
 	@rmdir $(mandir)/en
 	@echo "done."
 
 uninstall:
-	@echo -n Removing manual files...
+	@echo -n "- Removing manual files..."
 	@for x in $(languages); do \
 	  if [ -e $(name)_$$x.7 ]; \
 	  then \

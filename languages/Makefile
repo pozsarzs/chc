@@ -14,7 +14,7 @@ all:
 clean:
 
 install:
-	@echo -n Installing message files...
+	@echo -n "- Installing message files..."
 	@for x in $(languages); do \
 	  if [ -e $(name)_$$x.mo ]; \
 	  then \
@@ -26,7 +26,7 @@ install:
 	@echo "done."
 
 uninstall:
-	@echo -n Removing message files...
+	@echo -n "- Removing message files..."
 	@for x in $(languages); do \
 	  if [ -e $(name)_$$x.mo ]; \
 	  then \
