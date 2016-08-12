@@ -227,6 +227,12 @@ end;
 
 // OnCreate event
 procedure TForm1.FormCreate(Sender: TObject);
+ {$IFDEF WIN32}
+var
+  buffer: pchar;
+  size: integer;
+ {$ENDIF}
+
 begin
   saved:=true;
   Form1.Caption:=APPNAME+' v'+VERSION;
@@ -246,13 +252,13 @@ begin
   s:=getenv('LANG');
  {$ENDIF}
  {$IFDEF WIN32}
-  Size:=GetLocaleInfo (LOCALE_USER_DEFAULT, LOCALE_SABBREVLANGNAME, nil, 0);
-  GetMem(Buffer, Size);
+  size:=getLocaleinfo (LOCALE_USER_DEFAULT, LOCALE_SABBREVLANGNAME, nil, 0);
+  getmem(buffer, size);
   try
-    GetLocaleInfo (LOCALE_USER_DEFAULT, LOCALE_SABBREVLANGNAME, Buffer, Size);
-    s:=string(Buffer);
+    getlocaleinfo (LOCALE_USER_DEFAULT, LOCALE_SABBREVLANGNAME, Buffer, Size);
+    s:=string(buffer);
   finally
-    FreeMem(Buffer);
+    freemem(buffer);
   end;
  {$ENDIF}
   if length(s)=0 then s:='en';
