@@ -68,25 +68,22 @@ if not "%ANSWER%"=="" set INSTDIR=%ANSWER%
 if not exist "%INSTDIR%" ( echo Error: target directory not found! & goto end )
 set INSTDIR=%INSTDIR%\%NAME%
 echo Selected target folder: %INSTDIR%
-
-
-
-pause
-
-
+if not exist "source\lib\%ARCH%-%OS%\chc.exe" ( echo Error: firstly run "build.bat" to compile source code! & goto end )
+echo Installing application...
 md %INSTDIR%
-rem if not %ERRORLEVEL%=="0" goto error  
+if not errorlevel 0 ( echo Error: cannot install application! & goto end )
 md %INSTDIR%\documents
+copy /y documents\*.* %INSTDIR%\documents\
+del /q %INSTDIR%\documents\Makefile
 md %INSTDIR%\documents\hu
+copy /y documents\hu\*.* %INSTDIR%\documents\hu\
+del /q %INSTDIR%\documents\hu\Makefile
 md %INSTDIR%\languages
-copy documents\AUTHORS %INSTDIR%\documents\authors.txt
-copy documents\COPYING %INSTDIR%\documents\copying.txt
-copy documents\README %INSTDIR%\documents\readme.txt
-copy documents\VERSION %INSTDIR%\documents\version.txt
-copy documents\hu\README %INSTDIR%\documents\hu\readme.txt
-copy languages\*.* %INSTDIR%\languages\
-copy README %INSTDIR%\readme.txt 
-copy source\lib\%ARCH%-%OS%\chc.exe %INSTDIR%\chc.exe 
+copy /y languages\*.* %INSTDIR%\languages\
+del /q %INSTDIR%\languages\Makefile
+copy /y README*.* %INSTDIR%\
+copy /y source\lib\%ARCH%-%OS%\*.exe %INSTDIR%\
+config\mkshortcut.vbs /target:%INSTDIR%\%NAME%.exe /shortcut:%USERPROFILE%\desktop\CHC
 goto end
 
 rem - uninstall application
