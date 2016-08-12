@@ -6,10 +6,8 @@ rem  build.bat
 rem  Utility for build/install/uninstall application on Windows
 rem ----------------------------------------------------------------------------
 
-rem - variables 
 set PPC=c:\lazarus\fpc\2.6.4\bin\i386-win32\ppc386.exe
 set LAZ=c:\lazarus\
-
 set NAME=CHC
 set /p VERSION=<documents\VERSION
 set OS=win32
@@ -37,17 +35,16 @@ rem - build source
 echo Check FreePascal compiler: %PPC%
 if not exist "%PPC%" ( set /p PPC=Enter compiler with full path: )
 if not exist "%PPC%" ( echo Error: compiler not found! & goto end )
-
 echo Check Lazarus IDE folder: %LAZ%
 if not exist "%LAZ%" ( set /p LAZ=Enter component units folder: )
 if not exist "%LAZ%" ( echo Error: Folder not found! & goto end )
-
 set FPFLAG1=-TWin32 -MObjFPC -Scgi -O1 -ve -WG
 set FPFLAG2=-Fu%LAZ%\lcl\units\%ARCH%-%OS% -Fu%LAZ%\lcl\units\%ARCH%-%OS%\%OS%
 set FPFLAG3=-Fu%LAZ%\components\lazutils\lib\%ARCH%-%OS% -Fu. -Fu.\lib\%ARCH%-%OS%
 set FPFLAG4=-FE.\lib\%ARCH%-%OS% -dLCL -dLCLwin32
-
 cd source
+echo Compiling source code...
+echo.
 %PPC% %FPFLAG1% %FPFLAG2% %FPFLAG3% %FPFLAG4% chc.lpr
 echo.
 if errorlevel 0 echo Run 'build.bat install' to install application.
@@ -56,12 +53,27 @@ goto end
 
 rem - clean source
 :clean
-
+echo Cleaning source code...
+del /q source\lib\%ARCH%-%OS%\*.*
 goto end
 
 rem - install application
 :install
-set INSTDIR=%APPDIR%\%NAME%
+set INSTDIR=%PROGRAMFILES(X86)%
+if "%INSTDIR%"=="" ( set INSTDIR=%PROGRAMFILES% )
+echo Default target folder: %INSTDIR%
+set ANSWER=
+set /p "ANSWER=Enter target folder or leave empty to use default and press Enter: "
+if not "%ANSWER%"=="" set INSTDIR=%ANSWER%
+if not exist "%INSTDIR%" ( echo Error: target directory not found! & goto end )
+set INSTDIR=%INSTDIR%\%NAME%
+echo Selected target folder: %INSTDIR%
+
+
+
+pause
+
+
 md %INSTDIR%
 rem if not %ERRORLEVEL%=="0" goto error  
 md %INSTDIR%\documents
