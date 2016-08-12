@@ -1,10 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Choking coil sizing application
-Name[hu]=Fojtótekercs méretező
+Name=CHC
+Comment=Choking coil sizing application
+Comment[hu]=Fojtótekercs méretező
 Exec=chc
 Icon=chc.xpm
 Type=Application
 Categories=Application;Electronics;
 Terminal=false
 StartupNotify=true
+
