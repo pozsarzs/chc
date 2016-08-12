@@ -68,6 +68,7 @@ if not "%ANSWER%"=="" set INSTDIR=%ANSWER%
 if not exist "%INSTDIR%" ( echo Error: target directory not found! & goto end )
 set INSTDIR=%INSTDIR%\%NAME%
 echo Selected target folder: %INSTDIR%
+echo %INSTDIR% > install.log
 if not exist "source\lib\%ARCH%-%OS%\chc.exe" ( echo Error: firstly run "build.bat" to compile source code! & goto end )
 echo Installing application...
 md %INSTDIR%
@@ -84,17 +85,20 @@ del /q %INSTDIR%\languages\Makefile
 copy /y README*.* %INSTDIR%\
 copy /y source\lib\%ARCH%-%OS%\*.exe %INSTDIR%\
 config\mkshortcut.vbs /target:%INSTDIR%\%NAME%.exe /shortcut:%USERPROFILE%\desktop\CHC
+echo.
+echo Run 'build.bat uninstall' if you remove this application.
 goto end
 
 rem - uninstall application
 :uninstall
-
-
+if not exist "install.log" ( echo Error: install.log file not found, cannot uninstall application! & goto end )
+set /p %INSTDIR%=<install.log
+echo Check application's folder: %INSTDIR%
+if not exist "%INSTDIR%" ( echo Error: bad folder name in install.log file, cannot uninstall application! & goto end )
+echo Removing application...
+rd /s %INSTDIR%
+del /q %USERPROFILE%\desktop\CHC.lnk
 goto end
 
-rem - error message
-:error
-echo An error occured!
-pause
-
 :end
+pause
