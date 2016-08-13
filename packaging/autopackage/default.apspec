@@ -1,0 +1,64 @@
+# +----------------------------------------------------------------------------+
+# | CHC v0.2 * Chocking coil sizing application                                |
+# | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                  |
+# | default.apspec                                                             |
+# | apspec file for autopackage                                                |
+# +----------------------------------------------------------------------------+
+
+[Meta]
+RootName: @pozsarzs.hu/chc:$SOFTWAREVERSION
+DisplayName: Chocking coil sizer
+ShortName: chc
+Maintainer: Pozsar Zsolt <pozsarzs@gmail.com>
+Packager: Pozsar Zsolt <pozsarzs@gmail.com>
+Summary: Chocking coil sizer.
+URL: http://www.pozsarzs.hu/chc/chc_en.html
+License: GNU General Public License, Version 3 or later
+SoftwareVersion: 0.2
+Repository: http://www.pozsarzs.hu/chc/chc.xml
+AutopackageTarget: 1.0
+
+[BuildPrepare]
+# documents
+echo $build_root
+mkdir --parent $build_root/share/chc/documents/hu
+cp $source_dir/documents/* $build_root/share/chc/documents/
+cp $source_dir/documents/hu/* $build_root/share/chc/documents/hu/
+# locales
+mkdir --parent $build_root/share/chc/languages/hu
+cp $source_dir/languages/* $build_root/share/chc/languages/
+cp $source_dir/languages/hu/* $build_root/share/chc/languages/hu/
+# manuals
+mkdir --parent $build_root/share/chc/manual
+cp $source_dir/manual/* $build_root/share/chc/manual/
+# other files
+cp $source_dir/chc $build_root/share/chc/
+cp $source_dir/README $build_root/share/chc/README
+mkdir --parent $build_root/share/application/
+cp $source_dir/chc.desktop $build_root/share/application/
+mkdir --parent $build_root/share/pixmaps/
+cp $source_dir/chc.xpm $build_root/share/pixmaps/
+
+[BuildUnprepare]
+unprepareBuild
+
+[Imports]
+echo 'share/' | import
+
+[Prepare]
+# Dependency checking
+require @xfree86.org/xlib 6.0
+
+[Install]
+installData share/chc
+outputStatus "$intl_INSTALLING_EXE"
+linkFile --silent $PREFIX/share/chc/chc $PREFIX/bin/chc
+linkFile --silent $PREFIX/share/manual/chc_en.7 $PREFIX/share/man/man7/chc.7
+linkFile --silent $PREFIX/share/manual/chc_hu.7 $PREFIX/share/man/hu/man7/chc.7
+installDesktop "Application/Electronics" share/application/chc.desktop
+installIcon share/pixmaps/chc.xpm
+
+[Uninstall]
+# Usually just the following line is enough to uninstall everything
+uninstallFromLog
+

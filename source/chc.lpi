@@ -22,7 +22,7 @@
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <MinorVersionNr Value="2"/>
-      <StringTable CompanyName="Pozsar Zsolt" FileDescription="Chocking coil sizing application" LegalCopyright="(C)2012-2016 Pozsar Zsolt" OriginalFilename="chc.exe" ProductName="CHC"/>
+      <StringTable CompanyName="Pozsar Zsolt" FileDescription="Chocking coil sizing application" LegalCopyright="(C)2012-2016 Pozsar Zsolt" OriginalFilename="chc.exe" ProductName="CHC" ProductVersion=""/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="default" Default="True"/>
@@ -52,6 +52,7 @@
         <Filename Value="chc.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="chc"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="1"/>
         <TopLine Value="1"/>
@@ -67,11 +68,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="frmmain"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="10"/>
-        <CursorPos X="38" Y="28"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="7"/>
         <UsageCount Value="33"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
