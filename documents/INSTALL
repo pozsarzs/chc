@@ -39,7 +39,7 @@ c. From binary (tar.gz) package
    # tar -xzf chc-0.2-i586.tar.gz
    # cd chc
    # ./create_links
-                or
+            or
    # tar -xzf chc-0.2-i586.tar.gz
    # cd chc
    # ./install

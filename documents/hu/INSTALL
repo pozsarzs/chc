@@ -1,51 +1,87 @@
-Telepítési utasítás Linux operációs rendszerhez
-===============================================
+                              Telepítési utasítás
+                              ~~~~~~~~~~~~~~~~~~~
+1. FreeBSD
+~~~~~~~~~~
+a. Bináris (tbz) csomagból
 
-1. Telepítés
-------------
+   Használja a csomagkezelőt a telepítéshez/eltávolításhoz.
 
-a. Telepítés bináris '.tar.gz' csomagból
+b. Forrásnyelvű csomagból
 
-    # cp chc-0.1-i586.tar.gz /opt
-    # cd /opt
-    # tar -xzf chc-0.1-i586.tar.gz
-    # cd chc
-    # ./create_links
-    
-                vagy
+   Fordítás és telepítés:
+   # tar -xzf chc-0.2.tar.gz
+   # ./configure
+   # make
+   # make install
 
-    # tar -xzf chc-0.1-i586.tar.gz
-    # cd chc
-    # ./install
+   Eltávolítás:
+   # make uninstall
 
-b. Telepítés '.bin' csomagból
+2. Linux
+~~~~~~~~
+a. Bináris (deb, rpm, txz) csomagból
 
-    # ./chc-0.1-i586.bin
+   Használja a csomagkezelőt a telepítéshez/eltávolításhoz.
 
-c. Telepítés forráscsomagból
-     
-    # tar -xzf chc-0.1.tar.gz
-    # ./configure
-    # make
-    # make install
+b. Bináris (bin) csomagból
 
-2. Eltávolítás
---------------
+   Telepítés:
+   # ./chc-0.2-i586.bin
 
-a. Ha bináris '.tar.gz' csomagból telepítette
+   Eltávolítás:
+   # /opt/chc/uninstall
 
-    # /opt/chc/remove_links
-    # rm -r /opt/chc/
+c. Bináris (tar.gz) csomagból
 
+   Telepítés:
+   # cp chc-0.2-i586.tar.gz /opt
+   # cd /opt
+   # tar -xzf chc-0.2-i586.tar.gz
+   # cd chc
+   # ./create_links
             vagy
+   # tar -xzf chc-0.2-i586.tar.gz
+   # cd chc
+   # ./install
 
-    # /opt/chc/uninstall
+   Eltávolítás:
+   # /opt/chc/remove_links
+   # rm -r /opt/chc/
+            vagy
+   # /opt/chc/uninstall
 
-b. Ha '.bin' csomagból telepítette
+d. Forrásnyelvű csomagból
 
-    # /opt/chc/uninstall
+   Fordítás és telepítés:
+   $ tar -xzf chc-0.2.tar.gz
+   $ ./configure
+   $ make
+   # make install
 
-c. Ha forráscsomagból telepítette
+   Eltávolítás:
+   # make uninstall
 
-    # make uninstall
+3. Windows
+~~~~~~~~~~
+a. Bináris (exe) csomagból
+
+   Futtassa a telepítőfájl és kövesse az utasításokat.
+
+b. Bináris (msi) csomagból
+
+   > msiexec.exe /i chc-0.2-win32.msi    (vagy duplakattintással nyissa meg a
+                                         csomagot) 
+c. Bináris (zip) csomagból
+
+   > unzip chc-0.2-win32.zip             (vagy használjon csomagoló alkalmazás)
+
+d. Forrásnyelvű csomagból
+
+   Fordítás és telepítés:
+   > tar -xzf chc-0.2.tar.gz             (vagy használjon csomagoló alkalmazást)
+   > build.bat
+   > build.bat install
+
+   Eltávolítás:
+   > build.bat uninstall
 
