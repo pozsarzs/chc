@@ -1,0 +1,2 @@
+?package(chc):needs="X11" section="Applications/Science/Electronics"\
+        title="CHC" icon="/usr/share/pixmaps/chc.xpm" command="/usr/bin/chc"

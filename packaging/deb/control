@@ -1,0 +1,11 @@
+Package: chc
+Version: 0.2
+Section: electronics
+Priority: extra
+Architecture: i386
+Installed-Size: 3.6 MB
+Maintainer: Pozsar Zsolt <pozsarzs@gmail.com>
+Depends: libc6, libgdk-pixbuf2, libglib2.0-0, libgtk2.0-0
+Description: EI core choking coil sizing application.
+ Licenc: GPL
+
