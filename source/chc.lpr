@@ -23,8 +23,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 program chc;
 {$MODE OBJFPC}{$H+}
 uses
-  Dialogs, Interfaces, Forms, SysUtils, crt,
-  frmmain, frmabout;
+  Dialogs, Interfaces, Forms, SysUtils,
+ {$IFDEF UseFHS} unttranslator, {$ELSE} DefaultTranslator,{$ENDIF}
+  crt,  frmmain, frmabout;
 var
   b: byte;
   appmode: byte;
@@ -112,4 +113,4 @@ begin
   Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.
-
+
