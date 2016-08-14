@@ -2052,6 +2052,10 @@ version=`cat documents/VERSION`
 os=`ppc386 -iSO`
 architecture=`ppc386 -iSP`
 
+mandir="$prefix/man"
+test "$os" = "linux" && mandir="$datarootdir/man"
+
+
 
 
 

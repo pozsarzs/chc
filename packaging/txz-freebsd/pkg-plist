@@ -1,0 +1,14 @@
+bin/chc
+man/hu/man7/chc.7
+man/man7/chc.7
+share/applications/chc.desktop
+share/doc/chc/AUTHORS
+share/doc/chc/COPYING
+share/doc/chc/ChangeLog
+share/doc/chc/INSTALL
+share/doc/chc/README
+share/doc/chc/VERSION
+share/doc/chc/hu/INSTALL
+share/doc/chc/hu/README
+share/locale/hu/LC_MESSAGES/chc.mo
+share/pixmaps/chc.xpm

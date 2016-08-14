@@ -28,6 +28,9 @@ version=`cat documents/VERSION`
 os=`ppc386 -iSO`
 architecture=`ppc386 -iSP`
 
+mandir="$prefix/man"
+test "$os" = "linux" && mandir="$datarootdir/man"
+
 AC_SUBST(architecture)
 AC_SUBST(bindir)
 AC_SUBST(datarootdir)
@@ -36,6 +39,7 @@ AC_SUBST(install)
 AC_SUBST(lcldir)
 AC_SUBST(libdir)
 AC_SUBST(make)
+AC_SUBST(mandir)
 AC_SUBST(os)
 AC_SUBST(prefix)
 AC_SUBST(rm)
