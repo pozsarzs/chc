@@ -1,5 +1,5 @@
 # +----------------------------------------------------------------------------+
-# | CHC v0.2 * Chocking coil sizing application                                |
+# | CHC v0.2 * Choking coil sizing application                                 |
 # | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                  |
 # | Makefile                                                                   |
 # | Makefile for manuals                                                       |

@@ -7,7 +7,7 @@
 
 [Meta]
 RootName: @pozsarzs.hu/chc:$SOFTWAREVERSION
-DisplayName: Chocking coil sizer
+DisplayName: Choking coil sizer
 ShortName: chc
 Maintainer: Pozsar Zsolt <pozsarzs@gmail.com>
 Packager: Pozsar Zsolt <pozsarzs@gmail.com>

@@ -18,11 +18,11 @@ a. for FreeBSD
    chc-0.2.tbz                 binary package
 
 b. for Linux
-   chc-0.2-1.i386.rpm          binary package
+   chc-0.2-1.i586.rpm          binary package
    chc-0.2-i586-1.txz          binary package
    chc-0.2-i586.bin            installer programme
    chc-0.2-i586.tar.gz         binary package
-   chc-0.2.package             binary package
+   chc-0.2.x86.package         binary package
    chc_0.2-1_i386.deb          binary package
 
 c. for Windows

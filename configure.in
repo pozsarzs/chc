@@ -1,5 +1,5 @@
 dnl +--------------------------------------------------------------------------+
-dnl | CHC v0.2 * Chocking coil sizing application                              |
+dnl | CHC v0.2 * Choking coil sizing application                               |
 dnl | Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>                |
 dnl | configure.in                                                             |
 dnl | Autoconf input file for unix-like systems                                |

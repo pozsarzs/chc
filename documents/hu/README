@@ -18,11 +18,11 @@ a. FreeBSD
    chc-0.2.tbz                 bináris csomag
 
 b. Linux
-   chc-0.2-1.i386.rpm          bináris csomag
+   chc-0.2-1.i586.rpm          bináris csomag
    chc-0.2-i586-1.txz          bináris csomag
    chc-0.2-i586.bin            telepítő program
    chc-0.2-i586.tar.gz         bináris csomag
-   chc-0.2.package             bináris csomag
+   chc-0.2.x86.package         bináris csomag
    chc_0.2-1_i386.deb          bináris csomag
 
 c. Windows

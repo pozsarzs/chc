@@ -1,6 +1,6 @@
 @echo off
 rem ----------------------------------------------------------------------------
-rem  CHC v0.2 * Chocking coil sizing application
+rem  CHC v0.2 * Choking coil sizing application
 rem  Copyright (C) 2012-2016 Pozsar Zsolt <pozsarzs@gmail.com>
 rem  build.bat
 rem  Utility for build/install/uninstall application on Windows
