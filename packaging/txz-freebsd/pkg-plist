@@ -1,6 +1,6 @@
 bin/chc
-man/hu/man7/chc.7
-man/man7/chc.7
+man/hu/man7/chc.7.gz
+man/man7/chc.7.gz
 share/applications/chc.desktop
 share/doc/chc/AUTHORS
 share/doc/chc/COPYING

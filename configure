@@ -589,6 +589,7 @@ version
 os
 lcldir
 fpflag
+bprefix
 architecture
 hfpc
 make
@@ -2055,6 +2056,11 @@ architecture=`ppc386 -iSP`
 mandir="$prefix/man"
 test "$os" = "linux" && mandir="$datarootdir/man"
 
+bprefix="$prefix"
+test "$stagedir" != "" && prefix="$stagedir"
+test "$stagedir" != "" && mandir="$prefix/man"
+
+
 
 
 
@@ -3233,7 +3239,8 @@ Summary
 =======
     Target op. system	$os
     Target processor	$architecture
-    Install prefix	$prefix
+    Install prefix	$bprefix
 
   Type '${make}' for compilation and then '${make} install'.
 "
+test "$stagedir" != "" && echo Install to FreeBSD stage directory: $prefix

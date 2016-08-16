@@ -21,6 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 }
 
 const
-  MYI18PATH='@prefix@/share/locale/';
-  INSTPATH='@prefix@/';
+  MYI18PATH='@bprefix@/share/locale/';
+  INSTPATH='@bprefix@/';
 
