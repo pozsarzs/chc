@@ -80,7 +80,9 @@ md %INSTDIR%\documents\hu
 copy /y documents\hu\*.* %INSTDIR%\documents\hu\
 del /q %INSTDIR%\documents\hu\Makefile
 md %INSTDIR%\languages
-copy /y languages\*.* %INSTDIR%\languages\
+copy /y languages\*.pot %INSTDIR%\languages\
+md %INSTDIR%\languages\hu
+copy /y languages\%NAME%_hu.mo %INSTDIR%\languages\hu\%NAME%.mo
 del /q %INSTDIR%\languages\Makefile
 copy /y README*.* %INSTDIR%\
 copy /y source\lib\%ARCH%-%OS%\*.exe %INSTDIR%\
