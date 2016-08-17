@@ -4,7 +4,7 @@ Name: chc
 Packager: Pozsar Zsolt <pozsarzs@gmail.com>
 Release: 1
 Summary: EI core choking coil sizing application.
-Url: http://www.pozsarzs.hu/tubes/tubes_en.html
+Url: http://www.pozsarzs.hu/chc/chc_en.html
 Vendor: Pozsar Zsolt
 Version: 0.2
 

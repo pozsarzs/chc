@@ -94,8 +94,8 @@ end;
 // run mailer
 procedure runmailer(url: string);
 begin
-  Form2.Process1.Executable:=MAILER;
-  Form2.Process1.Parameters.Add(url);
+  Form2.Process2.Executable:=MAILER;
+  Form2.Process2.Parameters.Add(url);
   try
     Form2.Process2.Execute;
   except
