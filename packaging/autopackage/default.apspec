@@ -53,8 +53,8 @@ require @xfree86.org/xlib 6.0
 installData share/chc
 outputStatus "$intl_INSTALLING_EXE"
 linkFile --silent $PREFIX/share/chc/chc $PREFIX/bin/chc
-linkFile --silent $PREFIX/share/manual/chc_en.7 $PREFIX/share/man/man7/chc.7
-linkFile --silent $PREFIX/share/manual/chc_hu.7 $PREFIX/share/man/hu/man7/chc.7
+linkFile --silent $PREFIX/share/chc/manual/chc_en.7 $PREFIX/share/man/man7/chc.7
+linkFile --silent $PREFIX/share/chc/manual/chc_hu.7 $PREFIX/share/man/hu/man7/chc.7
 installDesktop "Application/Electronics" share/application/chc.desktop
 installIcon share/pixmaps/chc.xpm
 
